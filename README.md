@@ -61,9 +61,6 @@ pip install -r requirements.txt
 jupyter notebook notebooks/03_model_training.ipynb
 
 🧭 Next Steps (Planned)
-
 Add Lag Features to include previous hour/day usage memory
-
 Train XGBoost/LightGBM for optimized performance
-
 Deploy model using Streamlit dashboard for live usage feedback
