@@ -60,7 +60,31 @@ pip install -r requirements.txt
 # Place dataset inside /data/ folder
 jupyter notebook notebooks/03_model_training.ipynb
 
-🧭 Next Steps (Planned)
-Add Lag Features to include previous hour/day usage memory
-Train XGBoost/LightGBM for optimized performance
-Deploy model using Streamlit dashboard for live usage feedback
+📊 4. Visual Insights
+
+### **Feature Importance**
+Shows which features influence consumption the most.
+<img width="327" height="245" alt="image" src="https://github.com/user-attachments/assets/e6eb05b6-2afe-45b3-8319-2da65798d090" />
+
+
+### **Hourly Consumption Pattern**
+<img width="291" height="368" alt="image" src="https://github.com/user-attachments/assets/f25ce030-6ef2-4a97-ad1f-6409ddb8a621" />
+
+
+---
+
+## 🌐 5. Streamlit Dashboard
+
+The deployed web app includes:
+
+- 🎛 Interactive input controls (hour, month, weekend, appliance usage)  
+- 📈 Hourly consumption visualization  
+- 🔍 Clean dark UI with sidebar navigation  
+- 🧮 Real-time energy consumption prediction  
+- ⚙️ Auto-adjustment for missing model features  
+- 💻 Publicly deployed on Streamlit Cloud  
+
+### To run locally:
+pip install -r requirements.txt
+streamlit run app.py
+
