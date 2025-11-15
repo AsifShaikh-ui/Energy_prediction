@@ -81,8 +81,11 @@ jupyter notebook notebooks/03_model_training.ipynb
 
 📊 Visual Insights
 Feature Importance
+<img width="327" height="345" alt="image" src="https://github.com/user-attachments/assets/f1bfef56-c1f5-48a2-9302-182b7dd3b45c" />
 
 Hourly Consumption Pattern
+<img width="291" height="268" alt="image" src="https://github.com/user-attachments/assets/15de7f08-47af-4d56-9d48-43f382a1d3c8" />
+
 
 🌐 Streamlit Dashboard
 The deployed app includes:
