@@ -75,9 +75,6 @@ git clone https://github.com/AsifShaikh-ui/Energy_prediction.git
 cd Energy_prediction
 pip install -r requirements.txt
 
-To run the model training:
-
-jupyter notebook notebooks/03_model_training.ipynb
 
 📊 Visual Insights
 Feature Importance
