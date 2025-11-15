@@ -63,7 +63,6 @@ jupyter notebook notebooks/03_model_training.ipynb
 📊 4. Visual Insights
 
 ### **Feature Importance**
-Shows which features influence consumption the most.
 <img width="327" height="245" alt="image" src="https://github.com/user-attachments/assets/e6eb05b6-2afe-45b3-8319-2da65798d090" />
 
 
