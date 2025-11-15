@@ -2,88 +2,103 @@
 
 📘 Overview
 This project focuses on analyzing and predicting household energy consumption patterns using machine learning.
-The main goal is to understand energy usage trends and build a model that can optimize power consumption for better efficiency.
-Phase 1 (Data Cleaning & Preprocessing) has been completed.
-Phase 2 (Model Training & Interpretation) has also now been completed.
+The goal is to understand real usage behavior and build a model that can optimize electricity usage for better efficiency.
+
+Phase 1: Data Cleaning & Preprocessing — Completed
+Phase 2: Model Training & Interpretation — Completed
 
 🧩 Phase 1 – Data Understanding & Preprocessing
-✔ Tasks Completed:
-Data loading and inspection
-Replaced missing values and converted data types
-Unified date and time into a DateTime index
-Resampled data to hourly level to reduce noise and learn clear patterns
+✔ Tasks Completed
 
-Feature extraction:
+Loaded and inspected raw dataset
+Replaced missing values and converted all numeric columns to proper types
+Unified Date + Time into a single DateTime index
+Resampled data to hourly level to reduce noise and extract meaningful patterns
+
+Extracted time-based features:
+
 hour, day, day_of_week, month, is_weekend
-Outlier and distribution exploration
-Correlation heatmap and feature relationship analysis
-
-Feature encoding and scaling where required
+Explored distributions and outlier
+Created correlation heatmap to analyze feature relationships
+Applied feature encoding and scaling where needed
 
 🤖 Phase 2 – Model Building & Evaluation
-Linear Regression	MAE :- 0.171,	RMSE:- 0.228,	R²:- 0.640	Baseline Trend Fit
-RandomForest Regressor (Final)	MAE:- 0.109,	RMSE:- 0.154,	R²:-0.780 	Captures non-linear usage behavior
+Model Performance
 
-Interpretation:
-The RandomForest model clearly performed better, showing that energy usage is non-linear and depends heavily on behavior + appliance usage patterns.
+Linear Regression (Baseline):
+MAE: 0.171
+RMSE: 0.228
+R²: 0.640
 
-🔍 Key Insights From Feature Importance
-Sub_metering_3 is the strongest driver of total power usage
-→ Indicates high-power appliances like water heaters or AC
+Good baseline trend fit
 
-Hour of the day strongly influences consumption
-→ Evening usage peaks between 7 PM – 10 PM
+RandomForest Regressor (Final Model):
 
-Weekend vs Weekday difference is small
-→ Daily routines matter more than weekly patterns
+MAE: 0.109
+RMSE: 0.154
+R²: 0.780
+
+Captures strong non-linear usage behavior
+Interpretation
+The RandomForest model performed significantly better, confirming that energy usage is non-linear and depends heavily on:
+Human activity patterns
+Time of the day
+Use of high-power appliances (geysers, AC, heaters)
+
+🔍 Key Insights (Feature Importance)
+
+Sub_metering_3 is the strongest driver of total power consumption → indicates energy-heavy appliances
+Hour of the day strongly affects usage → evening peak around 7 PM – 10 PM
+Weekend vs weekday difference is small → daily behavior matters more than the week
 
 📈 Consumption Pattern Visualization
-Average usage pattern across the day shows clear behavior:
-Low consumption early morning
-Small rise during morning activity (7–9 AM)
-Strong peak in evening (7–10 PM) when high-power appliances are used
-Save and include your plot here (if stored):
-results/average_hourly_consumption.png
+
+Energy usage trend across a day typically shows:
+Very low consumption early morning
+Minor rise around 7–9 AM
+Sharp peak between 7 PM – 10 PM (high-power appliances)
+Include your stored plot here:
+visualization/average_hourly_consumption.png
 
 📂 Dataset
+
 This project uses the Household Electric Power Consumption Dataset.
-Download from:
+
+🔗 Download Dataset:
 https://archive.ics.uci.edu/ml/datasets/individual+household+electric+power+consumption
 
-Dataset is not included in this repository due to GitHub file size limits.
-Place the dataset in a folder named data/ inside the project directory.
+Note: Dataset is not included in this repository due to size limits.
+Place it manually inside a folder named data/ in the project directory.
 
 🚀 How to Run This Project
 git clone https://github.com/AsifShaikh-ui/Energy_prediction.git
 cd Energy_prediction
 pip install -r requirements.txt
-# Place dataset inside /data/ folder
+
+To run the model training:
+
 jupyter notebook notebooks/03_model_training.ipynb
 
-📊 4. Visual Insights
+📊 Visual Insights
+Feature Importance
 
-### **Feature Importance**
-<img width="327" height="245" alt="image" src="https://github.com/user-attachments/assets/e6eb05b6-2afe-45b3-8319-2da65798d090" />
+Hourly Consumption Pattern
 
+🌐 Streamlit Dashboard
+The deployed app includes:
 
-### **Hourly Consumption Pattern**
-<img width="291" height="368" alt="image" src="https://github.com/user-attachments/assets/f25ce030-6ef2-4a97-ad1f-6409ddb8a621" />
+🎛 Interactive input controls (hour, month, weekend, high-power usage level)
 
+📈 Hourly consumption insight plot
 
----
+🔍 Clean dark UI with sidebar navigation
 
-## 🌐 5. Streamlit Dashboard
+🧮 Real-time prediction using RandomForest
 
-The deployed web app includes:
+⚙️ Auto-adjustment for missing model features
 
-- 🎛 Interactive input controls (hour, month, weekend, appliance usage)  
-- 📈 Hourly consumption visualization  
-- 🔍 Clean dark UI with sidebar navigation  
-- 🧮 Real-time energy consumption prediction  
-- ⚙️ Auto-adjustment for missing model features  
-- 💻 Publicly deployed on Streamlit Cloud  
+☁️ Fully deployed on Streamlit Cloud
 
-### To run locally:
+Run locally:
 pip install -r requirements.txt
 streamlit run app.py
-
